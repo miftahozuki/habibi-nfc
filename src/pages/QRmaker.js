@@ -98,7 +98,7 @@ export default class QRmaker extends Component {
           <TouchableOpacity
             style={styles.buttonRead}
             onPress={() => this.getTap()}>
-            <Text style={{color: 'white'}}>Generate</Text>
+            <Text style={{color: 'white', fontFamily: 'Lato-Bold'}}>Generate</Text>
           </TouchableOpacity>
         </View>
         <Modal isVisible={this.state.popup}>
@@ -127,14 +127,14 @@ export default class QRmaker extends Component {
             <Text
               style={{
                 color: 'black',
-                fontWeight: 'bold',
                 textAlign: 'center',
                 fontSize: 16,
                 marginTop: 60,
+                fontFamily: 'Lato-Bold'
               }}>
               Ready to scan..
             </Text>
-            <Text style={{color: 'black', textAlign: 'center'}}>
+            <Text style={{color: 'black', textAlign: 'center', fontFamily: 'Lato-Medium'}}>
               Please tap your NFC compatible TAG properly on the back of your
               device.
             </Text>
@@ -149,7 +149,7 @@ export default class QRmaker extends Component {
                 borderRadius: 50,
                 elevation: 8,
               }}>
-              <Text style={{color: 'white'}}>Tutup</Text>
+              <Text style={{color: 'white', fontFamily: 'Lato-Bold'}}>Tutup</Text>
             </TouchableOpacity>
           </View>
         </Modal>

@@ -140,7 +140,7 @@ export default class Tanaman18 extends Component {
         <View style={styles.bottomView}>
           {/* welcome view */}
           <View style={{padding: 40}}>
-            <Text style={{color: '#30ccbc', fontSize: 30, fontWeight: 'bold'}}>
+            <Text style={{color: '#30ccbc', fontSize: 30, fontFamily: 'Lato-Bold'}}>
               Custom
             </Text>
             {/* Form Input View */}
@@ -412,9 +412,9 @@ const styles = StyleSheet.create({
   brandViewText: {
     color: '#30ccbc',
     fontSize: 25,
-    fontWeight: 'bold',
     textTransform: 'uppercase',
     marginBottom: 120,
+    fontFamily: 'Lato-Bold'
   },
   bottomView: {
     flex: 1.5,
@@ -443,6 +443,7 @@ const styles = StyleSheet.create({
   label: {
     color: 'black',
     paddingBottom: 10,
+    fontFamily: 'Lato-Medium'
   },
   button: {
     backgroundColor: '#30ccbc',
@@ -453,6 +454,6 @@ const styles = StyleSheet.create({
   btext: {
     color: 'white',
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold'
   },
 });

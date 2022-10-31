@@ -89,6 +89,7 @@ const styles = {
     fontSize: 18,
     padding: 32,
     color: 'white',
+    fontFamily: 'Lato-Medium'
   },
   textBold: {
     fontWeight: '500',

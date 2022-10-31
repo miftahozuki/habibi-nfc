@@ -211,14 +211,14 @@ class App extends React.Component {
               <Text
                 style={{
                   color: 'black',
-                  fontWeight: 'bold',
                   textAlign: 'center',
                   fontSize: 16,
                   marginTop: 60,
+                  fontFamily: 'Lato-Bold'
                 }}>
                 Ready to scan..
               </Text>
-              <Text style={{color: 'black', textAlign: 'center'}}>
+              <Text style={{color: 'black', textAlign: 'center', fontFamily: 'Lato-Medium'}}>
                 Please tap your NFC compatible TAG properly on the back of your
                 device.
               </Text>
@@ -235,7 +235,7 @@ class App extends React.Component {
                   borderRadius: 50,
                   elevation: 8,
                 }}>
-                <Text style={{color: 'white'}}>Cancel</Text>
+                <Text style={{color: 'white', fontFamily: 'Lato-Bold'}}>Cancel</Text>
               </TouchableOpacity>
             </View>
           </Modal>
@@ -290,6 +290,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#ffffff',
+    fontFamily: 'Lato-Bold'
   },
   log: {
     marginTop: 30,

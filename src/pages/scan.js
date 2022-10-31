@@ -90,6 +90,7 @@ class Scan extends Component {
                       color: '#30ccbc',
                       textAlign: 'center',
                       fontSize: 18,
+                      fontFamily: 'Lato-Bold'
                     }}>
                     Gallery
                   </Text>
