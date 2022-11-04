@@ -9,10 +9,11 @@ import {
   BackHandler,
   Alert,
   StatusBar,
+  StyleSheet
 } from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import styles from './scanStyle';
 // import { QRreader } from "react-native-qr-decode-image-camera";
+
 var ImagePicker = require('react-native-image-picker');
 
 class Scan extends Component {
@@ -103,4 +104,30 @@ class Scan extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  scrollViewStyle: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    backgroundColor: '#30ccbc',
+  },
+  centerText: {
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 18,
+    padding: 32,
+    color: 'white',
+    fontFamily: 'Lato-Medium'
+  },
+  buttonScan: {
+    borderRadius: 10,
+    paddingTop: 5,
+    paddingRight: 25,
+    paddingBottom: 5,
+    paddingLeft: 25,
+    marginTop: 20,
+    backgroundColor: 'white',
+  }
+})
+
 export default Scan;
