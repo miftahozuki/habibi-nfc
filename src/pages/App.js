@@ -54,6 +54,17 @@ import Tanaman47 from './Tanaman47';
 import Tanaman48 from './Tanaman48';
 import Tanaman49 from './Tanaman49';
 import Tanaman50 from './Tanaman50';
+import Tanaman51 from './Tanaman51';
+import Tanaman52 from './Tanaman52';
+import Tanaman53 from './Tanaman53';
+import Tanaman54 from './Tanaman54';
+import Tanaman55 from './Tanaman55';
+import Tanaman56 from './Tanaman56';
+import Tanaman57 from './Tanaman57';
+import Tanaman58 from './Tanaman58';
+import Tanaman59 from './Tanaman59';
+import Tanaman60 from './Tanaman60';
+import Tanaman61 from './Tanaman61';
 //import all the screens we are going to switch
 
 const App = createStackNavigator(
@@ -93,16 +104,7 @@ const App = createStackNavigator(
     Tanaman31: {screen: Tanaman31},
     Tanaman32: {screen: Tanaman32},
     Tanaman33: {screen: Tanaman33},
-    Tanaman34: {screen: Tanaman34},
-    Tanaman35: {screen: Tanaman35},
-    Tanaman36: {screen: Tanaman36},
-    Tanaman37: {screen: Tanaman37},
-    Tanaman38: {screen: Tanaman38},
-    Tanaman39: {screen: Tanaman39},
-    Tanaman40: {screen: Tanaman40},
-    Tanaman41: {screen: Tanaman41},
-    Tanaman42: {screen: Tanaman42},
-    Tanaman43: {screen: Tanaman43},
+    Tanaman34: {screen: Tanaman34},Tanaman59: {screen: Tanaman59},
     Tanaman44: {screen: Tanaman44},
     Tanaman45: {screen: Tanaman45},
     Tanaman46: {screen: Tanaman46},
@@ -110,7 +112,17 @@ const App = createStackNavigator(
     Tanaman48: {screen: Tanaman48},
     Tanaman49: {screen: Tanaman49},
     Tanaman50: {screen: Tanaman50},
-
+    Tanaman51: {screen: Tanaman51},
+    Tanaman52: {screen: Tanaman52},
+    Tanaman53: {screen: Tanaman53},
+    Tanaman54: {screen: Tanaman54},
+    Tanaman55: {screen: Tanaman55},
+    Tanaman56: {screen: Tanaman56},
+    Tanaman57: {screen: Tanaman57},
+    Tanaman58: {screen: Tanaman58},
+    Tanaman59: {screen: Tanaman59},
+    Tanaman60: {screen: Tanaman60},
+    Tanaman61: {screen: Tanaman61},
     //First entry by default be our first screen if we do not define initialRouteName
   },
 
