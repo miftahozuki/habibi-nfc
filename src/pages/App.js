@@ -11,7 +11,9 @@ import Tanaman02 from './growth/Tanaman2';
 import Tanaman03 from './growth/Tanaman3';
 import Tanaman04 from './growth/Tanaman4';
 import Tanaman05 from './growth/Tanaman5';
+import Tanaman06 from './growth/Tanaman6';
 import Tanaman07 from './growth/Tanaman7';
+import Tanaman08 from './growth/Tanaman8';
 import Tanaman09 from './growth/Tanaman9';
 import Tanaman10 from './growth/Tanaman10';
 import Tanaman11 from './growth/Tanaman11';
@@ -78,7 +80,9 @@ const App = createStackNavigator(
     Tanaman03: {screen: Tanaman03},
     Tanaman04: {screen: Tanaman04},
     Tanaman05: {screen: Tanaman05},
+    Tanaman06: {screen: Tanaman06},
     Tanaman07: {screen: Tanaman07},
+    Tanaman08: {screen: Tanaman08},
     Tanaman09: {screen: Tanaman09},
     Tanaman10: {screen: Tanaman10},
     Tanaman11: {screen: Tanaman11},
@@ -105,6 +109,15 @@ const App = createStackNavigator(
     Tanaman32: {screen: Tanaman32},
     Tanaman33: {screen: Tanaman33},
     Tanaman34: {screen: Tanaman34},
+    Tanaman34: {screen: Tanaman35},
+    Tanaman34: {screen: Tanaman36},
+    Tanaman34: {screen: Tanaman37},
+    Tanaman34: {screen: Tanaman38},
+    Tanaman34: {screen: Tanaman39},
+    Tanaman34: {screen: Tanaman40},
+    Tanaman34: {screen: Tanaman41},
+    Tanaman34: {screen: Tanaman42},
+    Tanaman34: {screen: Tanaman43},
     Tanaman44: {screen: Tanaman44},
     Tanaman45: {screen: Tanaman45},
     Tanaman46: {screen: Tanaman46},

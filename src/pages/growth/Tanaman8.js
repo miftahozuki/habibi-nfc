@@ -18,7 +18,7 @@ import {set} from 'react-native-reanimated';
 import axios from 'axios';
 import moment from 'moment';
 
-export default class Tanaman9 extends Component {
+export default class Tanaman8 extends Component {
   constructor(props) {
     super(props);
 
@@ -69,7 +69,7 @@ export default class Tanaman9 extends Component {
     console.log(datas);
     // axios.post('https://sheet.best/api/sheets/147b3f63-e1b5-4320-b37f-a774c54e229e', datas, {headers: {'Content-Type': 'application/json'}}).then((response) =>{console.log(response)})
     axios
-      .post('https://api.habibigarden.com/growth/9/add', datas, {
+      .post('https://api.habibigarden.com/growth/8/add', datas, {
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       })
       .then(response => {

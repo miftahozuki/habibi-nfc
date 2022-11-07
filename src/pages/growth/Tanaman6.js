@@ -18,7 +18,7 @@ import {set} from 'react-native-reanimated';
 import axios from 'axios';
 import moment from 'moment';
 
-export default class Tanaman9 extends Component {
+export default class Tanaman6 extends Component {
   constructor(props) {
     super(props);
 
@@ -26,7 +26,7 @@ export default class Tanaman9 extends Component {
       tinggi_tanaman: '',
       lebar_daun: '',
       panjang_daun: '',
-      panjang_tangkal: '',
+      lebar_kanopi_t: '',
       jumlah_daunS: '',
       jumlah_daunR: '',
       jumlah_daunT: '',
@@ -35,10 +35,9 @@ export default class Tanaman9 extends Component {
       diameter_buah: '',
       panjang_buah: '',
       warna_buah: '',
-      diameter_pangkal: '',
-      diameter_1m: '',
-      jumlah_stolon: '',
-      jumlah_daun_stolon: '',
+      panjang_tangkai: '',
+      diameter_pangkalB1: '',
+      diameter_pangkalB2: '',
       isSubmit: false,
     };
   }
@@ -48,7 +47,7 @@ export default class Tanaman9 extends Component {
       tinggi_tanaman,
       lebar_daun,
       panjang_daun,
-      panjang_tangkal,
+      lebar_kanopi_t,
       jumlah_daunS,
       jumlah_daunR,
       jumlah_daunT,
@@ -57,19 +56,18 @@ export default class Tanaman9 extends Component {
       diameter_buah,
       panjang_buah,
       warna_buah,
-      diameter_pangkal,
-      diameter_1m,
-      jumlah_stolon,
-      jumlah_daun_stolon,
+      panjang_tangkai,
+      diameter_pangkalB1,
+      diameter_pangkalB2,
       isSubmit,
     } = this.state;
     const datas = `date=${moment().format(
       'YYYY/MM/DD',
-    )}&parameters=${tinggi_tanaman},${lebar_daun},${panjang_daun},${panjang_tangkal},${jumlah_daunS},${jumlah_daunR},${jumlah_daunT},${jumlah_bunga},${jumlah_buah},${diameter_buah},${panjang_buah},${warna_buah},${diameter_pangkal},${diameter_1m},${jumlah_stolon},${jumlah_daun_stolon}`;
+    )}&parameters=${tinggi_tanaman},${lebar_daun},${panjang_daun},${lebar_kanopi_t},${jumlah_daunS},${jumlah_daunR},${jumlah_daunT},${jumlah_bunga},${jumlah_buah},${diameter_buah},${panjang_buah},${warna_buah},${panjang_tangkai},${diameter_pangkalB1},${diameter_pangkalB2}`;
     console.log(datas);
     // axios.post('https://sheet.best/api/sheets/147b3f63-e1b5-4320-b37f-a774c54e229e', datas, {headers: {'Content-Type': 'application/json'}}).then((response) =>{console.log(response)})
     axios
-      .post('https://api.habibigarden.com/growth/9/add', datas, {
+      .post('https://api.habibigarden.com/growth/6/add', datas, {
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       })
       .then(response => {
@@ -90,7 +88,7 @@ export default class Tanaman9 extends Component {
       tinggi_tanaman,
       lebar_daun,
       panjang_daun,
-      panjang_tangkal,
+      lebar_kanopi_t,
       jumlah_daunS,
       jumlah_daunR,
       jumlah_daunT,
@@ -99,10 +97,9 @@ export default class Tanaman9 extends Component {
       diameter_buah,
       panjang_buah,
       warna_buah,
-      diameter_pangkal,
-      diameter_1m,
-      jumlah_stolon,
-      jumlah_daun_stolon,
+      panjang_tangkai,
+      diameter_pangkalB1,
+      diameter_pangkalB2,
       isSubmit,
     } = this.state;
 
@@ -116,7 +113,7 @@ export default class Tanaman9 extends Component {
           style={{height: Dimensions.get('window').height / 3.5}}
           source={bg}>
           <View style={styles.brandView}>
-            <Text style={styles.brandViewText}>Bumi Agro</Text>
+            <Text style={styles.brandViewText}>Greenhouse {'\n'}Unpad</Text>
           </View>
         </ImageBackground>
         {/* bottom view */}
@@ -124,7 +121,7 @@ export default class Tanaman9 extends Component {
           {/* welcome view */}
           <View style={{padding: 40}}>
             <Text style={{color: '#30ccbc', fontSize: 30, fontFamily: 'Lato-Bold'}}>
-              Strawberry
+              Melon Sakata Glamour
             </Text>
             {/* Form Input View */}
             <View>
@@ -174,13 +171,13 @@ export default class Tanaman9 extends Component {
                   />
                 </View>
                 <View style={styles.wrapper3}>
-                  <Text style={styles.label}>Panjang Tangkal : </Text>
+                  <Text style={styles.label}>Lebar Kanopi Tanaman : </Text>
                   <TextInput
                     style={styles.textInput}
                     placeholderTextColor="#c8c8c8"
                     placeholder="Masukkan Parameter"
-                    onChangeText={panjang_tangkal =>
-                      this.setState({panjang_tangkal})
+                    onChangeText={lebar_kanopi_t =>
+                      this.setState({lebar_kanopi_t})
                     }
                     keyboardType="numeric"
                   />
@@ -278,55 +275,25 @@ export default class Tanaman9 extends Component {
               </View>
               <View style={styles.wrapper2}>
                 <View>
-                  <Text style={styles.label}>
-                    Diameter Pangkal {'\n'} Tanaman :{' '}
-                  </Text>
+                  <Text style={styles.label}>Panjang Tangkai : </Text>
                   <TextInput
                     style={styles.textInput}
                     placeholderTextColor="#c8c8c8"
                     placeholder="Masukkan Parameter"
-                    onChangeText={diameter_pangkal =>
-                      this.setState({diameter_pangkal})
+                    onChangeText={panjang_tangkai =>
+                      this.setState({panjang_tangkai})
                     }
                     keyboardType="numeric"
                   />
                 </View>
                 <View style={styles.wrapper3}>
-                  <Text style={styles.label}>
-                    Diameter Pangkal {'\n'} Batang:{' '}
-                  </Text>
+                  <Text style={styles.label}>Diameter Pangkal Batang: </Text>
                   <TextInput
                     style={styles.textInput}
                     placeholderTextColor="#c8c8c8"
-                    placeholder="1m dari media"
-                    onChangeText={diameter_1m => this.setState({diameter_1m})}
-                    keyboardType="numeric"
-                  />
-                </View>
-              </View>
-              <View style={styles.wrapper2}>
-                <View>
-                  <Text style={styles.label}>Jumlah Stolon : {'\n'}</Text>
-                  <TextInput
-                    style={styles.textInput}
-                    placeholderTextColor="#c8c8c8"
-                    placeholder="Masukkan Parameter"
-                    onChangeText={jumlah_stolon =>
-                      this.setState({jumlah_stolon})
-                    }
-                    keyboardType="numeric"
-                  />
-                </View>
-                <View style={styles.wrapper3}>
-                  <Text style={styles.label}>
-                    Jumlah Daun pada {'\n'} Stolon :{' '}
-                  </Text>
-                  <TextInput
-                    style={styles.textInput}
-                    placeholderTextColor="#c8c8c8"
-                    placeholder="Masukkan Parameter"
-                    onChangeText={jumlah_daun_stolon =>
-                      this.setState({jumlah_daun_stolon})
+                    placeholder="1 m dari media"
+                    onChangeText={diameter_pangkalB1 =>
+                      this.setState({diameter_pangkalB1})
                     }
                     keyboardType="numeric"
                   />
