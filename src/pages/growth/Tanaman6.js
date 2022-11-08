@@ -12,10 +12,8 @@ import {
   StatusBar,
 } from 'react-native';
 import React, {Component} from 'react';
-import {Assets} from 'react-navigation-stack';
 import bg from '../../assets/bg.png';
-import {set} from 'react-native-reanimated';
-import axios from 'axios';
+import myAPI from '../../services/myAPI';
 import moment from 'moment';
 
 export default class Tanaman6 extends Component {
@@ -64,15 +62,12 @@ export default class Tanaman6 extends Component {
     const datas = `date=${moment().format(
       'YYYY/MM/DD',
     )}&parameters=${tinggi_tanaman},${lebar_daun},${panjang_daun},${lebar_kanopi_t},${jumlah_daunS},${jumlah_daunR},${jumlah_daunT},${jumlah_bunga},${jumlah_buah},${diameter_buah},${panjang_buah},${warna_buah},${panjang_tangkai},${diameter_pangkalB1},${diameter_pangkalB2}`;
-    console.log(datas);
-    // axios.post('https://sheet.best/api/sheets/147b3f63-e1b5-4320-b37f-a774c54e229e', datas, {headers: {'Content-Type': 'application/json'}}).then((response) =>{console.log(response)})
-    axios
-      .post('https://api.habibigarden.com/growth/6/add', datas, {
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      })
-      .then(response => {
-        console.log(response);
-      });
+    // console.log(datas);
+    myAPI.post('growth/6/add', datas, {
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    }).then(response => {
+      console.log(response);
+    });
     Alert.alert('Success', 'Data terkirim!', [
       {text: 'Okay', onPress: this.beranda},
     ]);
